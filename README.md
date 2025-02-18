@@ -15,17 +15,17 @@ L'algorithme d'étiquetage en composantes connexes permet d'identifier les régi
 
 ---
 
-## 📌 Exercice 2 : Filtre d'Aire  
+## Exercice 2 : Filtre d'Aire  
 
 Le filtre d’aire est un opérateur qui **supprime les petites composantes** d’une image binaire.  
 
-### 📍 Implémentation  
+### Implémentation  
 - La fonction `ccAreaFilter()` supprime toutes les composantes dont la taille est **inférieure à un seuil donné**.  
 - L'algorithme compte le nombre de pixels dans chaque composante puis filtre celles qui ne respectent pas le seuil.  
 
 ---
 
-## 📌 Exercice 3 : Étiquetage en Composantes Connexes - Optimisation  
+##  Exercice 3 : Étiquetage en Composantes Connexes - Optimisation  
 
 L'algorithme précédent (DFS/BFS) fonctionne bien mais a des accès **aléatoires** en mémoire, ce qui diminue ses performances sur de grandes images.  
 
@@ -34,13 +34,13 @@ Pour améliorer cela, un **algorithme en 2 passes** est implémenté. Il fonctio
 1. **Première passe** : Attribution de labels provisoires aux pixels en parcourant l’image ligne par ligne.  
 2. **Seconde passe** : Correction des labels en fusionnant les équivalences.  
 
-### 📍 Implémentation  
+### Implémentation  
 - L’algorithme optimisé est implémenté dans `ccTwoPassLabel()`.  
 - Il utilise une **table d’équivalence** pour regrouper les labels identiques et améliorer la gestion mémoire.  
 ---
 
-## 💻 Compilation et Exécution  
+## Compilation 
 
-### 1️⃣ Compiler le programme  
+### 1Compiler le programme  
 ```bash
 g++ -o segmentation main.cpp tpConnectedComponents.cpp `pkg-config --cflags --libs opencv4`
